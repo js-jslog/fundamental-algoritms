@@ -1,9 +1,9 @@
 const findCommonDivisor = function findCommonDivisor(input1, input2) {
-  const remainder = input2 % input1;
+  const remainder = input1 % input2;
 
-  if (remainder === 0) return input1;
+  if (remainder === 0) return input2;
 
-  return findCommonDivisor(remainder, input1);
+  return findCommonDivisor(input2, remainder);
 };
 
 module.exports = { findCommonDivisor };
